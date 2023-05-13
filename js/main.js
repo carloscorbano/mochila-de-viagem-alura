@@ -8,6 +8,8 @@ form.addEventListener("submit", (evento) => {
     const nome = evento.target.elements['nome']
     const quantidade = evento.target.elements['quantidade']
 
+    if(nome.value === "" || quantidade.value === "") return
+
     const itemAtual = {
         "nome": nome.value,
         "quantidade": quantidade.value
