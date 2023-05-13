@@ -15,7 +15,8 @@ form.addEventListener("submit", (evento) => {
         "quantidade": quantidade.value
     }
 
-    const existe = itens.find(elemento => elemento.nome === nome.value)
+
+    const existe = itens.find(elemento => elemento.nome.toLowerCase() === nome.value.toLowerCase())
 
     if(existe){
         itemAtual.id = existe.id
